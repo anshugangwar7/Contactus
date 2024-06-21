@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo{
+    font-size: 25px;
+    color: red;
+    text-decoration: none;
+    font-weight: 700;
+    pointer-events:none;
+}
+.navbar  a{
+font-size: 18px;
+color:red;
+text-decoration: none;
+font-weight: bold;
+margin-right: 40px;
+}
+.navbar a:hover{
+    color: #fff;
+}
+.navbar .btnLogin-popup{
+    position: relative;
+    background: transparent;
+    border:none;
+    outline:none;
+    font-size: 19px;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+}
+.navbar .btnLogin-popup::before{
+content:'';
+position: absolute;
+left: 0;
+bottom: -4px;
+width: 100%;
+height:2px;
+background: red;
+opacity: .85;
+}
+.section{
+    min-height: 100vh;
+    background: url(9.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.content{
+    width: 50%;
+    height: auto;
+    margin: 0 34px;
+    color: #fff;
+    position: relative;
+    top: 120px;
+}
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    letter-spacing: 2px;
+    position: relative;
+}
+.content span{
+    color: red;
+}
+.content .par{
+font-size: 20px;
+margin-left: 20px;
+letter-spacing: 2px;
+position:absolute ;
+top: 182px;
+}
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: red;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    position: absolute;
+    top:318px;
+}
+.content .cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+.cn:hover{
+    background-color: #fff;
+}
+.wrapper{
+position: absolute;
+top: 0;
+right: 0;
+width: 450px;
+height: 100%;
+background: transparent;
+backdrop-filter: blur(15px);
+box-shadow: -1px 0 10px rgba(0,0,0, .2);
+border-left: 2px solid rgba(255, 255, 255, .1);
+z-index: 100;
+display: flex;
+justify-content:center ;
+flex-direction: column;
+padding: 0 40px;
+opacity: 0;
+pointer-events: none;
+}
+.wrapper.active-popup{
+    opacity: 1;
+    pointer-events: auto;
+}
+.icon-close{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius:10px ;
+}
+
+.icon-close i{
+    font-size: 20px;
+    color:  black;
+
+}
+.wrapper .logreg-box{
+    width: 100%;
+    /* background-color: rgba(6, 6, 6, 0.821);
+    background: -webkit-linear-gradient(to right ,rgba(0, 0, 0, 0.574),rgba(0, 0, 0, 0.785)); */
+   }
+   .wrapper .form-box.login{
+    display: block;
+   }
+   .wrapper.active .form-box.login{
+    display: none;
+   }
+   .wrapper .form-box.register{
+    display: none;
+   }
+   .wrapper.active .form-box.register{
+    display: block;
+   }
+   .logreg-box .logreg-title{
+text-align: center;
+margin-bottom: 40px;
+color: red;
+   }
+   .logreg-title h2{
+    font-size: 32px;
+   }
+   .logreg-box .input-box{
+    position:relative;
+    width:100%;
+    height: 50px;
+    /* background: red; */
+    margin: 30px 0;
+    border-bottom: 2px solid red;
+   }
+   .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    padding-right: 25px;
+   }
+   .input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translatey(-50%);
+    pointer-events: none;
+    font-size:16px;
+    color: red;
+    font-weight: 500;
+    transition: .5s;
+   }
+   .input-box input:focus~label,.input-box input:valid~label{
+    top: -5px;
+   }
+   .input-box .icon{
+    position:absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%);
+    font-size: 19px;
+    color:red;
+   }
+.logreg-box .remember-forgot{
+    font-size: 14.5px;
+    color: white;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input{
+    accent-color: red;
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: red;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.logreg-box .btn{
+    width:100%;
+    height: 45px;
+    background: red;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0, .2);
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+.logreg-box .logreg-link{
+    font-size:14.5px;
+    color:white;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 15px;
+}
+.logreg-box p a{
+    color : red;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logreg-box p a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.media-options{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.media-options a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0, .2) ;
+    border-radius: 40px;
+    color: red;
+    text-decoration: none;
+    transition : .5s;
+}
+.media-options a:hover{
+    background:white;
+}
+.media-options a i{
+    font-size: 22px;  
+    margin: 0 8px 1.5px 0;
+}
+.media-options a span{
+    font-size: 16px;
+    font-weight: 700;
+}
